@@ -1,0 +1,16 @@
+n= 100;
+dx = 0.0001;
+e1  = ones(n,1);
+a= 0.0005
+A   = spdiags([e1 -e1], [-1 0], n ,n);
+A(1,n) = 1;
+A(n,1) = 1;
+tspan  = [0:0.5:10];
+x = linspace(0,1,100);
+u0 = exp(-(x-0.5).^2/(2*0.01))'
+plot(x,u0)
+
+[t y]  = ode45('rhs',tspan,u0, [],A,dx,a);
+waterfall(x,t,y);
+map = [0 0 0];
+colormap(map);
