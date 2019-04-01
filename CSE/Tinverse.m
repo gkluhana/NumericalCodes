@@ -1,8 +1,6 @@
 function T = Tinverse(n)
 
-%Can this be vectorized? Sum Matrix
-
-d = n:-1:1
+d = n:-1:1;
 T = diag(d,0);
 
 for i=1:n
@@ -17,3 +15,10 @@ for i=1:n
         end
     end
 end
+%Can this be vectorized? 
+
+% %YES
+% a = 1:n;
+% J = repmat(a',1,n);
+% I = repmat(a,n,1);
+% Ti = (n +1) - max(I,J) ;
