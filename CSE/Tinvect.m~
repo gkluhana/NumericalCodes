@@ -1,6 +1,0 @@
-function [T,Ti] = Tinvect(n)
-
-e1 = ones(n,1);
-U = spdiags([e1 -e1], [0, 1] , n ,n)
-T = U'*U % T = U' * U
-Ti = 0

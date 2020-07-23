@@ -4,3 +4,5 @@ j= 0:1:m-1;
 
 
 A= exp((2*pi*1i/n)*i'*j);
+
+% A = fft(eye(n,n))
