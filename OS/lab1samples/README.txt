@@ -8,7 +8,5 @@ make should be able to generate executable which can be run by: (assuming curren
 ./gradeit.sh . outputs
 
 
-Files were tested on courses2 and compiled without errors.
-
 
 
